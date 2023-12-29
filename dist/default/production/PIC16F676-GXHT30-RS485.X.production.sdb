@@ -1,0 +1,365 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F1840 ]
+[d frameptr 6 ]
+"5 C:\XC8\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\XC8\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"43 C:\XC8\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"10 C:\XC8\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\XC8\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\XC8\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\XC8\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\XC8\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\XC8\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"9 D:\PIC16\PIC16F676-GXHT30-RS485.X\GXHT30.c
+[v _IIC_init IIC_init `(v  1 e 1 0 ]
+"20
+[v _IIC_Start IIC_Start `(v  1 e 1 0 ]
+"36
+[v _IIC_Stop IIC_Stop `(v  1 e 1 0 ]
+"52
+[v _IIC_Ack IIC_Ack `(v  1 e 1 0 ]
+"66
+[v _IIC_NAck IIC_NAck `(v  1 e 1 0 ]
+"80
+[v _IIC_WAck IIC_WAck `(uc  1 e 1 0 ]
+"104
+[v _IIC_SendByte IIC_SendByte `(v  1 e 1 0 ]
+"132
+[v _IIC_ReadByte IIC_ReadByte `(uc  1 e 1 0 ]
+"183
+[v _GXHT30_read_result GXHT30_read_result `(v  1 e 1 0 ]
+"219
+[v _GXHT30_write_cmd GXHT30_write_cmd `(v  1 e 1 0 ]
+"15 D:\PIC16\PIC16F676-GXHT30-RS485.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"87
+[v _ASCII_TH ASCII_TH `(uc  1 e 1 0 ]
+"5 D:\PIC16\PIC16F676-GXHT30-RS485.X\MB1.c
+[v _main_init main_init `(v  1 e 1 0 ]
+[s S119 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"444 C:/Users/79972/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc\pic12f1840.h
+[u S126 . 1 `S119 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES126  1 e 1 @12 ]
+[s S102 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1017
+[u S109 . 1 `S102 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES109  1 e 1 @140 ]
+"1405
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S138 . 1 `uc 1 CCP1SEL 1 0 :1:0 
+`uc 1 P1BSEL 1 0 :1:1 
+`uc 1 TXCKSEL 1 0 :1:2 
+`uc 1 T1GSEL 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 SSSEL 1 0 :1:5 
+`uc 1 SDOSEL 1 0 :1:6 
+`uc 1 RXDTSEL 1 0 :1:7 
+]
+"2280
+[s S147 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SS1SEL 1 0 :1:5 
+`uc 1 SDO1SEL 1 0 :1:6 
+]
+[u S151 . 1 `S138 1 . 1 0 `S147 1 . 1 0 ]
+[v _APFCONbits APFCONbits `VES151  1 e 1 @285 ]
+"2395
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2690
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"2722
+[v _SPBRG SPBRG `VEuc  1 e 1 @411 ]
+[s S202 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"2826
+[u S211 . 1 `S202 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES211  1 e 1 @413 ]
+[s S30 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2888
+[u S39 . 1 `S30 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES39  1 e 1 @414 ]
+[s S180 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"2950
+[u S189 . 1 `S180 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES189  1 e 1 @415 ]
+"8 D:\PIC16\PIC16F676-GXHT30-RS485.X\main.c
+[v _Temperature Temperature `i  1 e 2 0 ]
+"9
+[v _Humidity Humidity `i  1 e 2 0 ]
+"10
+[v _Temperature_Value Temperature_Value `i  1 e 2 0 ]
+"11
+[v _Humidity_Value Humidity_Value `i  1 e 2 0 ]
+"12
+[v _ten ten `uc  1 e 1 0 ]
+[v _one one `uc  1 e 1 0 ]
+[v _hundred hundred `uc  1 e 1 0 ]
+"13
+[v _ten1 ten1 `uc  1 e 1 0 ]
+[v _one1 one1 `uc  1 e 1 0 ]
+[v _hundred1 hundred1 `uc  1 e 1 0 ]
+"15
+[v _main main `(v  1 e 1 0 ]
+{
+"85
+} 0
+"5 D:\PIC16\PIC16F676-GXHT30-RS485.X\MB1.c
+[v _main_init main_init `(v  1 e 1 0 ]
+{
+"31
+} 0
+"9 D:\PIC16\PIC16F676-GXHT30-RS485.X\GXHT30.c
+[v _IIC_init IIC_init `(v  1 e 1 0 ]
+{
+"17
+} 0
+"219
+[v _GXHT30_write_cmd GXHT30_write_cmd `(v  1 e 1 0 ]
+{
+[v GXHT30_write_cmd@addr addr `uc  1 a 1 wreg ]
+[v GXHT30_write_cmd@addr addr `uc  1 a 1 wreg ]
+[v GXHT30_write_cmd@MSB MSB `uc  1 p 1 4 ]
+[v GXHT30_write_cmd@LSB LSB `uc  1 p 1 5 ]
+"221
+[v GXHT30_write_cmd@addr addr `uc  1 a 1 8 ]
+"238
+} 0
+"183
+[v _GXHT30_read_result GXHT30_read_result `(v  1 e 1 0 ]
+{
+[v GXHT30_read_result@addr addr `uc  1 a 1 wreg ]
+"186
+[v GXHT30_read_result@buff buff `[6]ui  1 a 12 9 ]
+"185
+[v GXHT30_read_result@hum hum `ui  1 a 2 7 ]
+[v GXHT30_read_result@tem tem `ui  1 a 2 5 ]
+"183
+[v GXHT30_read_result@addr addr `uc  1 a 1 wreg ]
+"187
+[v GXHT30_read_result@addr addr `uc  1 a 1 4 ]
+"216
+} 0
+"10 C:\XC8\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\XC8\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 1 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 0 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 72 ]
+"70
+} 0
+"8 C:\XC8\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S633 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S638 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S641 . 4 `l 1 i 4 0 `d 1 f 4 0 `S633 1 fAsBytes 4 0 `S638 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S641  1 a 4 20 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 14 ]
+[s S710 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S713 . 2 `s 1 i 2 0 `us 1 n 2 0 `S710 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S713  1 a 2 24 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 19 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 18 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 13 ]
+"8
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
+"205
+} 0
+"4 C:\XC8\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `us  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `us  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"8 C:\XC8\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 46 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 39 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 44 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 51 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 50 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 43 ]
+"8
+[v ___fldiv@a a `d  1 p 4 26 ]
+[v ___fldiv@b b `d  1 p 4 30 ]
+"185
+} 0
+"10 C:\XC8\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 71 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 70 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 69 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 68 ]
+"10
+[v ___fladd@b b `d  1 p 4 52 ]
+[v ___fladd@a a `d  1 p 4 56 ]
+"237
+} 0
+"80 D:\PIC16\PIC16F676-GXHT30-RS485.X\GXHT30.c
+[v _IIC_WAck IIC_WAck `(uc  1 e 1 0 ]
+{
+"82
+[v IIC_WAck@i i `uc  1 a 1 1 ]
+"101
+} 0
+"36
+[v _IIC_Stop IIC_Stop `(v  1 e 1 0 ]
+{
+"49
+} 0
+"20
+[v _IIC_Start IIC_Start `(v  1 e 1 0 ]
+{
+"33
+} 0
+"104
+[v _IIC_SendByte IIC_SendByte `(v  1 e 1 0 ]
+{
+"106
+[v IIC_SendByte@i i `ui  1 a 2 2 ]
+"104
+[v IIC_SendByte@txd txd `ui  1 p 2 0 ]
+"129
+} 0
+"132
+[v _IIC_ReadByte IIC_ReadByte `(uc  1 e 1 0 ]
+{
+"134
+[v IIC_ReadByte@i i `uc  1 a 1 4 ]
+[v IIC_ReadByte@receive receive `uc  1 a 1 3 ]
+"132
+[v IIC_ReadByte@ack ack `ui  1 p 2 0 ]
+"180
+} 0
+"66
+[v _IIC_NAck IIC_NAck `(v  1 e 1 0 ]
+{
+"77
+} 0
+"52
+[v _IIC_Ack IIC_Ack `(v  1 e 1 0 ]
+{
+"63
+} 0
+"87 D:\PIC16\PIC16F676-GXHT30-RS485.X\main.c
+[v _ASCII_TH ASCII_TH `(uc  1 e 1 0 ]
+{
+[v ASCII_TH@Value Value `i  1 p 2 4 ]
+[v ASCII_TH@bit bit `uc  1 p 1 6 ]
+"105
+} 0
+"5 C:\XC8\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\XC8\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 7 ]
+[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+"41
+} 0
