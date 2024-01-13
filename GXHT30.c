@@ -2,8 +2,8 @@
 #include "GXHT30.h"
 #include "MB1.h"
 
-extern int Temperature; //温度数据，变量
-extern int Humidity; //湿度数据，变量
+int Temperature; //温度数据，变量
+int Humidity; //湿度数据，变量
 
 //初始化I2C
 void IIC_init(void)
@@ -22,13 +22,13 @@ void IIC_Start(void)
 	SDA_O;			//数据端口输出
 	SCL_L;
 		
-	SDA_H;			//上拉数据（起始信号）
-	__delay_us(1);
+	SDA_H;			//上拉数据
+	__delay_ms(1);
 	SCL_H;			//上拉时钟
-	__delay_us(1);	//						SCL __/---\__
-	SDA_L;			//下拉数据				SDA ----\____ 
-	__delay_us(1);	//
-	SCL_L; 		   	//下拉时钟（复位）
+	__delay_ms(1);	//				SCL __/---\__
+	SDA_L;			//下拉数据		SDA ----\____ 
+	__delay_ms(1);	//
+	SCL_L; 		   	//下拉时钟
 	
 }
 
@@ -36,15 +36,15 @@ void IIC_Start(void)
 void IIC_Stop(void)
 {
 	SDA_O;
-	SCL_L;				//初始化
+	SCL_L;			//初始化
 	
-	SDA_L;				//下拉数据（结束信号）
-	__delay_us(1);		//
-	SCL_H;				//上拉时钟
-	__delay_us(1);		//						SCL __/---\__
-	SDA_H;				//上拉数据				SDA ____/----
-	__delay_us(1);		//
-	SCL_L;				//下拉时钟
+	SDA_L;			//下拉数据
+	__delay_ms(1);	//
+	SCL_H;			//上拉时钟
+	__delay_ms(1);	//				SCL __/---\__
+	SDA_H;			//上拉数据		SDA ____/----
+	__delay_ms(1);	//
+	SCL_L;			//下拉时钟
 	
 }
 
@@ -55,9 +55,9 @@ void IIC_Ack(void)
 	SCL_L;			//初始化
 	
 	SDA_L;			//下拉数据
-	__delay_us(1);		//						SCL __/---\__
-	SCL_H;			//上拉时钟				SDA _________  
-	__delay_us(1);		//
+	__delay_ms(1);		//			SCL __/---\__
+	SCL_H;			//上拉时钟		SDA _________  
+	__delay_ms(1);		//
 	SCL_L;			//下拉时钟
 	
 }
@@ -69,9 +69,9 @@ void IIC_NAck(void)
 	SCL_L;			//初始化
 	
 	SDA_H;			//上拉数据
-	__delay_us(1);		//						SCL __/---\__
-	SCL_H;			//上拉时钟				SDA ---------
-	__delay_us(1);		//
+	__delay_ms(1);		//			SCL __/---\__
+	SCL_H;			//上拉时钟		SDA ---------
+	__delay_ms(1);		//
 	SCL_L;			//下拉时钟
 	
 }
@@ -121,9 +121,9 @@ void IIC_SendByte(unsigned int txd)
  			
 		txd <<= 1; //发送完成后将待发送数据左移一位，准备发送下一位数据
 		SCL_H; //上拉时钟，发送数据
-		__delay_us(2);
+		__delay_ms(1);
 		SCL_L; //下拉时钟，发送完成
-		__delay_us(2); //延迟为了数据稳定
+		__delay_ms(1); //延迟为了数据稳定
 	}
 	
 }
@@ -136,7 +136,7 @@ unsigned char IIC_ReadByte(unsigned int ack) //ack 判断字节数据是否接收完成
    for(i = 0; i < 8; i++)
    {
    		SCL_L; //下拉时钟，复位
-		__delay_us(1);
+		__delay_ms(1);
 		SCL_H; //上拉时钟
 		
 		while(!SCL);
@@ -206,8 +206,8 @@ void GXHT30_read_result(unsigned char addr)
 	tem = ((buff[0] << 8) | buff[1]);	// 合并温度数据
 	hum = ((buff[3] << 8) | buff[4]);	// 合并湿度数据
 	
-	Temperature = (int)((175.0 * (float)tem / 65535.0 - 45.0) * 10); // T = -45 + 175 * tem / (2^16-1)
-	Humidity = (int)((100.0 * (float)hum /65535.0) * 10); // RH = hum*100 / (2^16-1)
+	Temperature = (int)((175.0 * (float)tem / 65535.0 - 45.0)); // T = -45 + 175 * tem / (2^16-1)
+	Humidity = (int)((100.0 * (float)hum /65535.0)); // RH = hum*100 / (2^16-1)
 	
 	hum = 0;	//变量重置
 	tem = 0;	//变量重置
