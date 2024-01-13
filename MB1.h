@@ -26,10 +26,11 @@
 
 #define _XTAL_FREQ 8000000
 
-void main_init(void);
-char ASCII_TH(int Value, char bit);
-void bit_Value(void);
-void EEPROM_write(int *eAddr, int *eDate, char *cData);
+void main_init(void);	// 主程序初始化
+char ASCII_TH(int Value, char bit);	// 数值拆分处理函数
+void bit_Value(void);	// 数值拆分传递函数
+void EEPROM_Write(char eAddr, char eDate);	// EEPROM写入函数
+void EEPROM_Read(char eAddr, char eDate);	// EEPROM读取函数
 
 #define SDA		PORTAbits.RA5
 #define T_SDA	TRISAbits.TRISA5

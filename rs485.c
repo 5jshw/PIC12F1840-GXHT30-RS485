@@ -132,12 +132,12 @@ char Rs485Decode(void) // 解码从485接收到的数据包
 		// 等待接收控制命令字节
 		case PKT_CMD:			// 4
 								cCommand = cRs485RxChar; // 存储控制命令字节
-								if (PacketHasPayload(cCommand) == 1)	// A1发送地址
+								if (PacketHasPayload(cCommand) == 1)	// A1修改地址
 								{
 									cRS485State = PKT_WAIT_DATA;
 									zcCommand = 1;
 								}
-								else if(PacketHasPayload(cCommand) == 2) // A2发送波特率
+								else if(PacketHasPayload(cCommand) == 2) // A2修改波特率
 								{
 									cRS485State = PKT_WAIT_DATA;
 									zcCommand = 2;
@@ -362,11 +362,11 @@ char PacketHasPayload(char ccCommand) // 检查控制命令类型
 {
 	if (ccCommand == SENSOR_ADDR)
 	{
-		return 1;	// A1发送地址
+		return 1;	// A1修改地址
 	}
 	else if(ccCommand == SENSOR_BAUD)
 	{
-		return 2;	// A2发送波特率
+		return 2;	// A2修改波特率
 	}
 	else if(ccCommand == SENSOR_MOD)
 	{

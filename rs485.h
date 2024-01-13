@@ -37,12 +37,13 @@ char PacketHasPayload(char ccCommand);		// 检查控制命令类型
 #define PKT_INVALID       255	// 无效
 
 // Error codes 错误代码
-#define BAD_LENGTH 1	// 长度错误
-#define BAD_CRC    2	// 校验码错误
+#define BAD_LENGTH	1	// 长度错误
+#define BAD_CRC		2	// 校验码错误
+#define BAD_NADDR[0]	3	// 地址错误
 
 // Packet types 数据包类型
-#define SENSOR_ADDR		0xA1	// 发送地址
-#define SENSOR_BAUD		0xA2	// 发送波特率
+#define SENSOR_ADDR		0xA1	// 修改地址
+#define SENSOR_BAUD		0xA2	// 修改波特率
 #define SENSOR_MOD		0xA3	// 发送状态
 #define SENSOR_GTHV		0xA4	// 发送温湿度数据
 
